@@ -7,7 +7,6 @@ import java.util.List;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 
@@ -18,7 +17,7 @@ public class ProductSearch {
 
 	public Product lookupProductBySku(long sku, String template) {
 		String msg = "";
-		List benefits = new ArrayList();
+		List<String> benefits = new ArrayList<String>();
 		benefits.add("Re-energize your life");
 		benefits.add("Lose weight");
 		benefits.add("Tastes great");
@@ -40,7 +39,7 @@ public class ProductSearch {
 	
 	public Product lookupProductByType(String productype, String quantity, String template) {
 		String msg = "";
-		List benefits = new ArrayList();
+		List<String> benefits = new ArrayList<String>();
 		benefits.add("Re-energize your life");
 		benefits.add("Lose weight");
 		benefits.add("Tastes great");
